@@ -1,0 +1,205 @@
+/* ====== Camphor Health — Clean White Theme ====== */
+:root{
+  --bg:#ffffff;
+  --panel:#f7f9fc;
+  --ink:#0b1220;
+  --muted:#5b667a;
+  --line:#e6eaf2;
+
+  --accent:#0f6fff;   /* primary blue */
+  --accent-2:#19c29c; /* fresh teal for subtle glow */
+
+  --radius:16px;
+  --shadow:0 10px 24px rgba(17, 27, 64, .06);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+}
+
+img{max-width:100%;display:block}
+.container{max-width:1120px;margin:auto;padding:0 20px}
+
+.grid-2{display:grid;gap:32px;grid-template-columns:1fr;align-items:start}
+@media(min-width:900px){.grid-2{grid-template-columns:1.05fr .95fr}}
+
+h1,h2,h3{line-height:1.2;margin:0 0 12px;color:var(--ink)}
+h1{font-size:clamp(32px,4vw,56px)}
+h2{font-size:clamp(26px,3vw,40px)}
+h3{font-size:clamp(20px,2vw,24px)}
+p{margin:0 0 14px}
+.lede{font-size:1.1rem;color:var(--muted)}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+button{font:inherit}
+
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{position:fixed;left:20px;top:20px;background:#fff;padding:8px 12px;border-radius:8px;border:1px solid var(--line);box-shadow:var(--shadow)}
+
+.site-header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(255,255,255,.8);
+  backdrop-filter: blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.site-header .container{
+  display:flex;align-items:center;justify-content:space-between;min-height:68px;
+}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--ink)}
+.brand img{height:30px;width:auto}
+.nav a{margin-left:18px;color:var(--ink);opacity:.85}
+.nav a:hover{opacity:1}
+
+.hero{
+  position:relative;overflow:hidden;
+  padding:84px 0 72px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(60% 50% at 20% 0%, rgba(15,111,255,.06), transparent 60%),
+    radial-gradient(60% 50% at 80% 10%, rgba(25,194,156,.08), transparent 60%);
+}
+.hero-inner{display:grid;gap:32px;grid-template-columns:1fr}
+@media(min-width:900px){.hero-inner{grid-template-columns:1.2fr .8fr}}
+.hero-copy .accent{color:var(--accent)}
+.hero-logo img{width:220px;margin:auto;opacity:.98;filter:drop-shadow(0 6px 18px rgba(15,111,255,.12))}
+.hero-glow{
+  position:absolute;inset:auto -15% -40% -15%;
+  height:50vh;pointer-events:none;
+  background:
+    radial-gradient(60% 60% at 50% -10%, rgba(15,111,255,.10), transparent 70%),
+    radial-gradient(40% 40% at 70% 10%, rgba(25,194,156,.12), transparent 70%);
+  filter: blur(40px);
+}
+
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--accent);color:#fff;font-weight:700;
+  padding:12px 16px;border-radius:12px;box-shadow:var(--shadow);
+  border:0;cursor:pointer;transition:transform .12s ease, filter .2s ease, box-shadow .2s ease;
+}
+.btn:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(15,111,255,.18)}
+.btn:active{transform:translateY(0)}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+
+.panel{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:20px;
+  box-shadow:var(--shadow);
+}
+
+.stats{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0 8px}
+.stats .num{display:block;font-size:1.6rem;font-weight:800}
+.stats .label{display:block;color:var(--muted);font-size:.9rem}
+
+.ticks{list-style:none;padding:0;margin:12px 0}
+.ticks li{position:relative;padding-left:26px;margin-bottom:8px}
+.ticks li::before{
+  content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  box-shadow:0 0 10px rgba(15,111,255,.25);
+}
+
+/* Map */
+.mapbox iframe{
+  width:100%;
+  height:320px;
+  border:0;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+/* Cards (legacy grid, if you use it elsewhere) */
+.cards{
+  display:grid;gap:18px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px;box-shadow:var(--shadow);transition:transform .12s ease, box-shadow .2s ease;
+}
+.card:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(17, 27, 64, .10)}
+.card img{aspect-ratio:1/1;object-fit:cover;border-radius:12px;margin-bottom:10px}
+
+/* Form */
+.form label{display:block;margin-bottom:12px}
+.form label span{display:block;margin-bottom:6px;color:var(--muted)}
+.form input,.form textarea{
+  width:100%;background:#fff;color:var(--ink);
+  border:1px solid var(--line);border-radius:12px;
+  padding:10px 12px;font:inherit;
+}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(15,111,255,.12)}
+
+.site-footer{
+  border-top:1px solid var(--line);padding:24px 0;margin-top:40px;background:#fff;
+}
+
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+.parallax{will-change:transform}
+
+/* === Organisation Tree (Directors on top, Stakeholders below) === */
+.org-tree {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:32px;
+  margin-top:40px;
+}
+
+.org-tree .level {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:32px;
+}
+
+.org-tree .person {
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:16px 20px;
+  text-align:center;
+  box-shadow:var(--shadow);
+  transition:transform .15s ease, box-shadow .15s ease;
+  width:200px;
+}
+.org-tree .person:hover {
+  transform:translateY(-2px);
+  box-shadow:0 12px 26px rgba(17,27,64,.10);
+}
+.org-tree .person img {
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:10px;
+}
+.org-tree h3 {margin:6px 0 4px;font-size:1.05rem}
+.org-tree p {font-size:.9rem;color:var(--muted);margin:0}
+
+.org-tree .connector {
+  width:2px;
+  height:40px;
+  background:linear-gradient(var(--accent), var(--accent-2));
+  border-radius:2px;
+}
+
+/* Responsive tweak */
+@media(max-width:600px){
+  .org-tree .person {width:160px;padding:14px}
+  .org-tree .level {gap:20px}
+}
