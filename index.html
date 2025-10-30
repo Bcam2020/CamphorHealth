@@ -29,6 +29,7 @@
       <nav id="primaryNav" class="nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#asset">Heatherlands</a>
+        <a href="#sites">Other Sites</a>
         <a href="#team">Team</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -73,7 +74,7 @@
             <div><span class="num">5</span><span class="label">Stakeholders</span></div>
             <div><span class="num">2</span><span class="label">Directors</span></div>
           </div>
-          <p class="muted">Primary directors: Susan &amp; Ivan. Stakeholders: Ivan, Susan, Ed, Ben, Beth.</p>
+          <p class="muted">Primary directors: Dr Ivan Camphor &amp; Susan. Stakeholders: Ben, Beth, Ed.</p>
         </div>
       </div>
     </section>
@@ -94,7 +95,7 @@
             </ul>
           </div>
 
-          <!-- Embedded Google Map -->
+          <!-- Embedded Google Map (Heatherlands) -->
           <div class="mapbox">
             <iframe
               title="Heatherlands Medical Centre map"
@@ -107,36 +108,70 @@
       </div>
     </section>
 
-    <!-- Team (Org Tree) -->
+    <!-- Other sites -->
+    <section id="sites" class="asset reveal">
+      <div class="container">
+        <h2>Other Sites</h2>
+        <p class="lede">Additional locations supported by our team.</p>
+        <div class="grid-2">
+          <div class="panel">
+            <h3>Prenton Medical Centre</h3>
+            <div class="mapbox">
+              <iframe
+                title="Prenton Medical Centre map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2380.414836097956!2d-3.062048323266857!3d53.371626672296635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b27983d16afcb%3A0x1b576de3d29e5949!2sPrenton%20Medical%20Centre!5e0!3m2!1sen!2suk!4v1761852579554!5m2!1sen!2suk"
+                width="100%" height="320" style="border:0;"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Woodchurch Medical Centre</h3>
+            <div class="mapbox">
+              <iframe
+                title="Woodchurch Medical Centre map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.9890851479377!2d-3.0914713885018177!3d53.3792447721833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b27db485c90f1%3A0xc4bc069eb16dd725!2sWoodchurch%20Medical%20Centre!5e0!3m2!1sen!2suk!4v1761852628015!5m2!1sen!2suk"
+                width="100%" height="320" style="border:0;"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team (Org Tree: Ivan → Susan → Ben/Beth/Ed) -->
     <section id="team" class="team reveal">
       <div class="container">
         <h2>Our People</h2>
         <p class="lede">A small, family-led team bringing clinical, operational and strategic expertise.</p>
 
         <div class="org-tree">
-          <!-- Directors -->
+          <!-- Level 1: Dr Ivan Camphor -->
           <div class="level directors">
             <div class="person">
-              <img src="images/susan.png" alt="Susan — Director, Nursing, education and governance">
-              <h3>Susan</h3>
-              <p>Director — Nursing, education &amp; governance</p>
-            </div>
-            <div class="person">
-              <img src="images/Ivan.png" alt="Ivan — Director, General Practice and strategy">
-              <h3>Ivan</h3>
+              <img src="images/Ivan.png" alt="Dr Ivan Camphor — Director, General Practice and strategy">
+              <h3>Dr Ivan Camphor</h3>
               <p>Director — General Practice &amp; strategy</p>
             </div>
           </div>
 
           <div class="connector"></div>
 
-          <!-- Stakeholders -->
-          <div class="level stakeholders">
+          <!-- Level 2: Susan -->
+          <div class="level directors">
             <div class="person">
-              <img src="images/Ed.png" alt="Ed — Stakeholder, operations and partnerships">
-              <h3>Ed</h3>
-              <p>Stakeholder — Operations &amp; partnerships</p>
+              <img src="images/susan.png" alt="Susan — Director, Nursing, education and governance">
+              <h3>Susan</h3>
+              <p>Director — Nursing, education &amp; governance</p>
             </div>
+          </div>
+
+          <div class="connector"></div>
+
+          <!-- Level 3: Stakeholders -->
+          <div class="level stakeholders">
             <div class="person">
               <img src="images/ben.png" alt="Ben — Stakeholder, cyber security and digital">
               <h3>Ben</h3>
@@ -146,6 +181,11 @@
               <img src="images/Beth.jpg" alt="Beth — Stakeholder, communications and outreach">
               <h3>Beth</h3>
               <p>Stakeholder — Communications &amp; outreach</p>
+            </div>
+            <div class="person">
+              <img src="images/Ed.png" alt="Ed — Stakeholder, operations and partnerships">
+              <h3>Ed</h3>
+              <p>Stakeholder — Operations &amp; partnerships</p>
             </div>
           </div>
         </div>
@@ -158,7 +198,7 @@
         <div>
           <h2>Contact</h2>
           <p class="lede">We’d love to hear from commissioners, practices, and community partners.</p>
-          <p>Email: <a href="mailto:hello@camphorhealth.com">hello@camphorhealth.com</a></p>
+          <p>Email: <a href="mailto:camphorbusiness@outlook.com">camphorbusiness@outlook.com</a></p>
         </div>
         <form class="panel form" onsubmit="event.preventDefault(); submitted();">
           <label>
