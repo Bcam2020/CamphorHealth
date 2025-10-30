@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Camphor Health — Property-backed Primary Care</title>
   <meta name="description" content="Camphor Health: property-backed health services with Heatherlands Medical Centre. Clean, modern and patient-centred.">
   <meta name="theme-color" content="#ffffff">
@@ -13,13 +13,20 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-header">
+  <!-- Header -->
+  <header class="site-header" id="header">
     <div class="container">
       <a class="brand" href="#top" aria-label="Camphor Health home">
         <img src="images/Logo.png" alt="Camphor Health logo">
         <span>Camphor Health</span>
       </a>
-      <nav class="nav" aria-label="Primary">
+
+      <!-- Mobile toggle -->
+      <button id="navToggle" class="hamburger" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primaryNav" class="nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#asset">Heatherlands</a>
         <a href="#team">Team</a>
@@ -40,8 +47,8 @@
             <a class="btn ghost" href="#contact">Get in touch</a>
           </div>
         </div>
-        <div class="hero-logo parallax">
-          <img src="images/Logo.png" alt="Camphor Health icon">
+        <div class="hero-logo parallax" aria-hidden="true">
+          <img src="images/Logo.png" alt="">
         </div>
       </div>
       <div class="hero-glow" aria-hidden="true"></div>
@@ -100,51 +107,50 @@
       </div>
     </section>
 
-    <!-- Team -->
+    <!-- Team (Org Tree) -->
     <section id="team" class="team reveal">
-    <div class="container">
+      <div class="container">
         <h2>Our People</h2>
-        <p class="lede">A small, family-led team bringing clinical, operational and strategic expertise to Camphor Health.</p>
+        <p class="lede">A small, family-led team bringing clinical, operational and strategic expertise.</p>
 
         <div class="org-tree">
-        <!-- Directors -->
-        <div class="level directors">
+          <!-- Directors -->
+          <div class="level directors">
             <div class="person">
-            <img src="images/susan.png" alt="Susan — Director, Nursing, education and governance">
-            <h3>Susan</h3>
-            <p>Director — Nursing, education &amp; governance</p>
+              <img src="images/susan.png" alt="Susan — Director, Nursing, education and governance">
+              <h3>Susan</h3>
+              <p>Director — Nursing, education &amp; governance</p>
             </div>
             <div class="person">
-            <img src="images/Ivan.png" alt="Ivan — Director, General Practice and strategy">
-            <h3>Ivan</h3>
-            <p>Director — General Practice &amp; strategy</p>
+              <img src="images/Ivan.png" alt="Ivan — Director, General Practice and strategy">
+              <h3>Ivan</h3>
+              <p>Director — General Practice &amp; strategy</p>
             </div>
-        </div>
+          </div>
 
-        <div class="connector"></div>
+          <div class="connector"></div>
 
-        <!-- Stakeholders -->
-        <div class="level stakeholders">
+          <!-- Stakeholders -->
+          <div class="level stakeholders">
             <div class="person">
-            <img src="images/Ed.png" alt="Ed — Stakeholder, operations and partnerships">
-            <h3>Ed</h3>
-            <p>Stakeholder — Operations &amp; partnerships</p>
+              <img src="images/Ed.png" alt="Ed — Stakeholder, operations and partnerships">
+              <h3>Ed</h3>
+              <p>Stakeholder — Operations &amp; partnerships</p>
             </div>
             <div class="person">
-            <img src="images/ben.png" alt="Ben — Stakeholder, cyber security and digital">
-            <h3>Ben</h3>
-            <p>Stakeholder — Cyber security &amp; digital</p>
+              <img src="images/ben.png" alt="Ben — Stakeholder, cyber security and digital">
+              <h3>Ben</h3>
+              <p>Stakeholder — Cyber security &amp; digital</p>
             </div>
             <div class="person">
-            <img src="images/Beth.jpg" alt="Beth — Stakeholder, communications and outreach">
-            <h3>Beth</h3>
-            <p>Stakeholder — Communications &amp; outreach</p>
+              <img src="images/Beth.jpg" alt="Beth — Stakeholder, communications and outreach">
+              <h3>Beth</h3>
+              <p>Stakeholder — Communications &amp; outreach</p>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
+      </div>
     </section>
-
 
     <!-- Contact -->
     <section id="contact" class="contact reveal">
@@ -152,7 +158,7 @@
         <div>
           <h2>Contact</h2>
           <p class="lede">We’d love to hear from commissioners, practices, and community partners.</p>
-          <p>Email: <a href="mailto:camphorbusiness@outlook.com">camphorbusiness@outlook.com</a></p>
+          <p>Email: <a href="mailto:hello@camphorhealth.com">hello@camphorhealth.com</a></p>
         </div>
         <form class="panel form" onsubmit="event.preventDefault(); submitted();">
           <label>

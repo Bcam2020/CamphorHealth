@@ -15,7 +15,6 @@ const io = new IntersectionObserver((entries) => {
     }
   });
 }, {threshold: 0.12});
-
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 // Subtle parallax on hero logo
@@ -26,6 +25,25 @@ if (p) {
     const y = (e.clientY / window.innerHeight - 0.5) * 6;
     p.style.transform = `translate3d(${x}px, ${y}px, 0)`;
   });
+}
+
+// Mobile nav toggle
+const toggle = document.getElementById('navToggle');
+const nav = document.getElementById('primaryNav');
+if (toggle && nav) {
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    toggle.classList.toggle('active');
+    nav.classList.toggle('show');
+  });
+
+  // Close menu when a link is clicked (nice mobile UX)
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.classList.remove('active');
+    nav.classList.remove('show');
+  }));
 }
 
 // Demo form handler
