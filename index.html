@@ -3,10 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Camphor Health — Property-backed Primary Care</title>
-  <meta name="description" content="Camphor Health: property-backed health services with Heatherlands Medical Centre. Clean, modern and patient-centred.">
+  <meta name="description" content="Camphor Health is a family-led company delivering community impact through well-managed, future-ready primary care estates." />
   <meta name="theme-color" content="#ffffff">
-  <link rel="preload" href="images/Logo.png" as="image">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Camphor Health — Property-backed Primary Care" />
+  <meta property="og:description" content="Family-led, community-first. Modern estates for excellent primary care." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/Logo.png" />
+  <meta property="og:site_name" content="Camphor Health" />
+
+  <!-- Preload small brand asset -->
+  <link rel="preload" href="images/Logo.png" as="image" imagesizes="(max-width: 768px) 32px, 40px">
+
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
@@ -17,7 +28,7 @@
   <header class="site-header" id="header">
     <div class="container">
       <a class="brand" href="#top" aria-label="Camphor Health home">
-        <img src="images/Logo.png" alt="Camphor Health logo">
+        <img src="images/Logo.png" width="40" height="40" alt="" decoding="async">
         <span>Camphor Health</span>
       </a>
 
@@ -34,11 +45,14 @@
         <a href="#contact">Contact</a>
       </nav>
     </div>
+
+    <!-- Subtle scroll progress -->
+    <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
   </header>
 
   <main id="main">
     <!-- Hero -->
-    <section id="top" class="hero reveal">
+    <section id="top" class="hero reveal" aria-label="Camphor Health overview">
       <div class="container hero-inner">
         <div class="hero-copy">
           <h1>Property-backed healthcare,<br><span class="accent">built for community impact.</span></h1>
@@ -48,11 +62,16 @@
             <a class="btn ghost" href="#contact">Get in touch</a>
           </div>
         </div>
+
+        <!-- Decorative brand mark with soft motion -->
         <div class="hero-logo parallax" aria-hidden="true">
-          <img src="images/Logo.png" alt="">
+          <img src="images/Logo.png" alt="" width="220" height="220" decoding="async" loading="eager">
         </div>
       </div>
+
+      <!-- Vitality glow background (CSS powered) -->
       <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-rays" aria-hidden="true"></div>
     </section>
 
     <!-- About -->
@@ -67,15 +86,16 @@
             <li>Long-term, community-first mindset</li>
           </ul>
         </div>
-        <div class="panel">
+
+        <aside class="panel" aria-label="Camphor Health at a glance">
           <h3>At a glance</h3>
           <div class="stats">
-            <div><span class="num">3</span><span class="label">Flagship Site</span></div>
+            <div><span class="num">1</span><span class="label">Flagship site</span></div>
             <div><span class="num">5</span><span class="label">Stakeholders</span></div>
             <div><span class="num">2</span><span class="label">Directors</span></div>
           </div>
           <p class="muted">Primary directors: Dr Ivan Camphor &amp; Susan. Stakeholders: Ben, Beth, Ed.</p>
-        </div>
+        </aside>
       </div>
     </section>
 
@@ -84,6 +104,7 @@
       <div class="container">
         <h2>Heatherlands Medical Centre</h2>
         <p class="lede">Our cornerstone property asset supporting high-quality GP services and room for innovation.</p>
+
         <div class="grid-2">
           <div class="panel">
             <h3>Overview</h3>
@@ -98,7 +119,7 @@
           <!-- Embedded Google Map (Heatherlands) -->
           <div class="mapbox">
             <iframe
-              title="Heatherlands Medical Centre map"
+              title="Heatherlands Medical Centre, map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.8506948646454!2d-3.091655223266253!3d53.38172087229958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b27dac6f77b05%3A0xcdd660f5788cfcc6!2sHeatherlands%20Medical%20Centre!5e0!3m2!1sen!2suk!4v1761842414175!5m2!1sen!2suk"
               width="100%" height="320" style="border:0;"
               allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
@@ -113,12 +134,13 @@
       <div class="container">
         <h2>Other Sites</h2>
         <p class="lede">Additional locations supported by our team.</p>
+
         <div class="grid-2">
           <div class="panel">
             <h3>Prenton Medical Centre</h3>
             <div class="mapbox">
               <iframe
-                title="Prenton Medical Centre map"
+                title="Prenton Medical Centre, map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2380.414836097956!2d-3.062048323266857!3d53.371626672296635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b27983d16afcb%3A0x1b576de3d29e5949!2sPrenton%20Medical%20Centre!5e0!3m2!1sen!2suk!4v1761852579554!5m2!1sen!2suk"
                 width="100%" height="320" style="border:0;"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
@@ -130,7 +152,7 @@
             <h3>Woodchurch Medical Centre</h3>
             <div class="mapbox">
               <iframe
-                title="Woodchurch Medical Centre map"
+                title="Woodchurch Medical Centre, map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.9890851479377!2d-3.0914713885018177!3d53.3792447721833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b27db485c90f1%3A0xc4bc069eb16dd725!2sWoodchurch%20Medical%20Centre!5e0!3m2!1sen!2suk!4v1761852628015!5m2!1sen!2suk"
                 width="100%" height="320" style="border:0;"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
@@ -141,7 +163,7 @@
       </div>
     </section>
 
-    <!-- Team (Org Tree: Ivan → Susan → Ben/Beth/Ed) -->
+    <!-- Team -->
     <section id="team" class="team reveal">
       <div class="container">
         <h2>Our People</h2>
@@ -150,43 +172,55 @@
         <div class="org-tree">
           <!-- Level 1: Dr Ivan Camphor -->
           <div class="level directors">
-            <div class="person">
-              <img src="images/Ivan.png" alt="Dr Ivan Camphor — Director, General Practice and strategy">
-              <h3>Dr Ivan Camphor</h3>
-              <p>Director — General Practice &amp; strategy</p>
-            </div>
+            <figure class="person">
+              <img src="images/Ivan.png" alt="Dr Ivan Camphor — Director: General Practice & strategy" width="400" height="400" loading="lazy" decoding="async">
+              <figcaption>
+                <h3>Dr Ivan Camphor</h3>
+                <p>Director — General Practice &amp; strategy</p>
+              </figcaption>
+            </figure>
           </div>
 
-          <div class="connector"></div>
+          <div class="connector" aria-hidden="true"></div>
 
           <!-- Level 2: Susan -->
           <div class="level directors">
-            <div class="person">
-              <img src="images/susan.png" alt="Susan — Director, Nursing, education and governance">
-              <h3>Susan</h3>
-              <p>Director — Nursing, education &amp; governance</p>
-            </div>
+            <figure class="person">
+              <img src="images/susan.png" alt="Susan — Director: Nursing, education & governance" width="400" height="400" loading="lazy" decoding="async">
+              <figcaption>
+                <h3>Susan</h3>
+                <p>Director — Nursing, education &amp; governance</p>
+              </figcaption>
+            </figure>
           </div>
 
-          <div class="connector"></div>
+          <div class="connector" aria-hidden="true"></div>
 
           <!-- Level 3: Stakeholders -->
           <div class="level stakeholders">
-            <div class="person">
-              <img src="images/ben.png" alt="Ben — Stakeholder, cyber security and digital">
-              <h3>Ben</h3>
-              <p>Stakeholder — Cyber security &amp; digital</p>
-            </div>
-            <div class="person">
-              <img src="images/Beth.jpg" alt="Beth — Stakeholder, communications and outreach">
-              <h3>Beth</h3>
-              <p>Stakeholder — Communications &amp; outreach</p>
-            </div>
-            <div class="person">
-              <img src="images/Ed.png" alt="Ed — Stakeholder, operations and partnerships">
-              <h3>Ed</h3>
-              <p>Stakeholder — Operations &amp; partnerships</p>
-            </div>
+            <figure class="person">
+              <img src="images/ben.png" alt="Ben — Stakeholder: Cyber security & digital" width="400" height="400" loading="lazy" decoding="async">
+              <figcaption>
+                <h3>Ben</h3>
+                <p>Stakeholder — Cyber security &amp; digital</p>
+              </figcaption>
+            </figure>
+
+            <figure class="person">
+              <img src="images/Beth.jpg" alt="Beth — Stakeholder: Communications & outreach" width="768" height="768" loading="lazy" decoding="async">
+              <figcaption>
+                <h3>Beth</h3>
+                <p>Stakeholder — Communications &amp; outreach</p>
+              </figcaption>
+            </figure>
+
+            <figure class="person">
+              <img src="images/Ed.png" alt="Ed — Stakeholder: Operations & partnerships" width="400" height="400" loading="lazy" decoding="async">
+              <figcaption>
+                <h3>Ed</h3>
+                <p>Stakeholder — Operations &amp; partnerships</p>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
@@ -200,18 +234,19 @@
           <p class="lede">We’d love to hear from commissioners, practices, and community partners.</p>
           <p>Email: <a href="mailto:camphorbusiness@outlook.com">camphorbusiness@outlook.com</a></p>
         </div>
-        <form class="panel form" onsubmit="event.preventDefault(); submitted();">
+
+        <form class="panel form" onsubmit="event.preventDefault(); submitted();" aria-label="Contact form">
           <label>
             <span>Name</span>
-            <input type="text" required placeholder="Your name">
+            <input name="name" type="text" required placeholder="Your name" autocomplete="name" />
           </label>
           <label>
             <span>Email</span>
-            <input type="email" required placeholder="you@example.com">
+            <input name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
           </label>
           <label>
             <span>Message</span>
-            <textarea rows="4" required placeholder="How can we help?"></textarea>
+            <textarea name="message" rows="4" required placeholder="How can we help?"></textarea>
           </label>
           <button class="btn" type="submit">Send</button>
           <p class="muted small">This demo form does not send; connect later to your email provider.</p>
